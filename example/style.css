@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans';
+}
+
+.navigation {
+    display: inline-block;
+    width: 250px;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #ddd;
+}
+
+.navigation .logo {
+    width: 210px;
+    padding: 20px 20px 0px;
+}
+
+.navigation .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation .nav-list .nav-item {
+    border-bottom: 1px solid #eee;
+}
+
+.navigation .nav-list .nav-item:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.navigation .nav-list .nav-item a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.container {
+    display: inline-block;
+    width: calc(100% - 291px);
+    height: 100%;
+    float: right;
+    padding: 0 20px;
+}

@@ -1,0 +1,80 @@
+<div>
+    <h2>Getting Started</h2>
+
+    <p>HighwayJs is designed to be incredibly simple! Just follow a few simple steps to get started!</p>
+
+    <h4>Step One</h4>
+
+    <p>Create a basic html page and load the highway.js script. You should also have a <span style="color: #007700">&lt;div&gt;</span> that has an attribute called <span style="color: #0000CC">highway-view</span>. This will be where each page will be displayed.</p>
+
+    <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">&lt;!DOCTYPE html&gt;</span>
+<span style="color: #007700">&lt;html&gt;</span>
+
+<span style="color: #007700">&lt;head&gt;</span>
+<span style="color: #007700">&lt;/head&gt;</span>
+
+<span style="color: #007700">&lt;body&gt;</span>
+    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;navigation&quot;</span><span style="color: #007700">&gt;</span>
+        <span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-list&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;li</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-item&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;#home&quot;</span><span style="color: #007700">&gt;</span>Home<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+            <span style="color: #007700">&lt;li</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-item&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;#gettingstarted&quot;</span><span style="color: #007700">&gt;</span>Getting Started<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+        <span style="color: #007700">&lt;/ul&gt;</span>
+    <span style="color: #007700">&lt;/div&gt;</span>
+
+    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;container&quot;</span> <span style="color: #0000CC">highway-view</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+
+    <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;../src/highway.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+    <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;index.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+<span style="color: #007700">&lt;/body&gt;</span>
+
+<span style="color: #007700">&lt;/html&gt;</span>
+</pre></div>
+
+<h4>Step Two</h4>
+
+<p>Create any HTML files required for each of your pages. Create a javascript file to set up the routes.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">(<span style="color: #008800; font-weight: bold">function</span>() {
+
+    <span style="color: #008800; font-weight: bold">function</span> HomeViewModel() {
+    }
+
+    HomeViewModel.prototype.init <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">function</span>(element) {
+        <span style="color: #888888">//this will be called when page is navigated to</span>
+    }
+
+    HomeViewModel.prototype.destroy <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">function</span>() {
+        <span style="color: #888888">//this is called when page is left</span>
+    }
+
+    highway.configureRoutes({
+        routes<span style="color: #333333">:</span> [{
+            state<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;home&#39;</span>,
+            template<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;pages/home/home.html&#39;</span>,
+            viewmodel<span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">new</span> HomeViewModel()
+        }, {
+            state<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;gettingstarted&#39;</span>,
+            template<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;pages/gettingstarted/gettingstarted.html&#39;</span>
+        }],
+        <span style="color: #008800; font-weight: bold">default</span><span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;home&#39;</span>
+    });
+})();
+</pre></div>
+
+<p>Use <b>highway.configureRoutes</b> to set up the routes. It should receive an object with a routes property which will be an array of route objects, and a property called default which will define the state to go to when one was not specified.<br/><br/>
+A <b>route</b> object must have a <b>state</b> property. This is a string that is essentially the name of the page. This will be displayed in the url.<br/><br/>
+You also need a <b>template</b> property which is the reference to the HTML file for that view.<br/><br/>
+An additional <b>viewmodel</b> property may be defined that allows a you to set up and tear down a view once it has been displayed.<br/><br/>
+The view model should have an <b>init</b> function which should accept one argument which will contain the root element contained in the
+template. <br/><br/>
+Another function called <b>destroy</b> can be defined that will be called once a page is left. This allows you to cleanup anything specific to the view.
+</p>
+
+<h4>Step Three</h4>
+
+<p>To navigate between views simply use an <b>a</b> tag and set the <b>href</b> to <b>#state</b>.</p>
+
+<h4>That is all there is to it!</h4>
+<br/>
+<br/>
+</div>
