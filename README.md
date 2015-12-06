@@ -91,3 +91,5 @@ Another function called **destroy** can be defined that will be called once a pa
 To navigate between views simply use an **a** tag and set the **href** to **#state**.
 
 #### That is all there is to it!
+
+We are accepting pull requests and suggestions!
