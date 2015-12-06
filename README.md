@@ -1,5 +1,10 @@
 #HighwayJS
 
+## Demo Page
+
+Check out the following link to see a sample application that uses HighwayJS:
+[Demo App](http://beginninghere.co.uk/highway/) 
+
 ## Getting Started
 
 HighwayJs is designed to be incredibly simple! Just follow a few simple steps to get started!
