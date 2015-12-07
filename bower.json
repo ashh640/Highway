@@ -1,0 +1,27 @@
+{
+  "name": "Highway",
+  "homepage": "https://github.com/ashh640/Highway",
+  "authors": [
+    "Ashley Hunter"
+  ],
+  "description": "A fast, lightweight and simple Javascript routing library with no dependencies.",
+  "main": "src/highway.js",
+  "moduleType": ["globals"],
+  "keywords": [
+    "javascript",
+    "js",
+    "routing",
+    "routes",
+    "app",
+    "single",
+    "app",
+    "angular",
+    "alternative",
+    "mobile-first",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "license": "MIT",
+  "ignore": []
+}
