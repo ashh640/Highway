@@ -3,13 +3,15 @@
 ## Demo Page
 
 Check out the following link to see a sample application that uses HighwayJS:
-[Demo App](http://beginninghere.co.uk/highway/) 
+[Demo App](http://beginninghere.co.uk/highway/)
 
 ## Getting Started
 
 HighwayJs is designed to be incredibly simple! Just follow a few simple steps to get started!
 
 #### Step One
+
+You need to add HighwayJS to your project. This can be done either by downloading **highway.js** or **highway.min.js** from the **src** folder in this repository, or by using bower - **bower install highway**.
 
 Create a basic html page and load the highway.js script. You should also have a <span style="color: #007700">&lt;div&gt;</span> that has an attribute called <span style="color: #0000CC">highway-view</span>. This will be where each page will be displayed.
 
