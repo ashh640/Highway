@@ -1,5 +1,10 @@
 #HighwayJS
 
+## Demo Page
+
+Check out the following link to see a sample application that uses HighwayJS:
+[Demo App](http://beginninghere.co.uk/highway/) 
+
 ## Getting Started
 
 HighwayJs is designed to be incredibly simple! Just follow a few simple steps to get started!
@@ -86,3 +91,5 @@ Another function called **destroy** can be defined that will be called once a pa
 To navigate between views simply use an **a** tag and set the **href** to **#state**.
 
 #### That is all there is to it!
+
+We are accepting pull requests and suggestions!
