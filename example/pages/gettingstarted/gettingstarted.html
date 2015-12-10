@@ -7,32 +7,57 @@
 
     <p>Create a basic html page and load the highway.js script. You should also have a <span style="color: #007700">&lt;div&gt;</span> that has an attribute called <span style="color: #0000CC">highway-view</span>. This will be where each page will be displayed.</p>
 
-    <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">&lt;!DOCTYPE html&gt;</span>
-<span style="color: #007700">&lt;html&gt;</span>
+    <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">&lt;!DOCTYPE html&gt;</span>
+    <span style="color: #007700">&lt;html&gt;</span>
 
-<span style="color: #007700">&lt;head&gt;</span>
-<span style="color: #007700">&lt;/head&gt;</span>
+    <span style="color: #007700">&lt;head&gt;</span>
+        <span style="color: #007700">&lt;title&gt;</span>Highway JS - Example Page<span style="color: #007700">&lt;/title&gt;</span>
+        <span style="color: #007700">&lt;link</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&#39;https://fonts.googleapis.com/css?family=Open+Sans:400,700&#39;</span> <span style="color: #0000CC">rel=</span><span style="background-color: #fff0f0">&#39;stylesheet&#39;</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&#39;text/css&#39;</span><span style="color: #007700">&gt;</span>
+        <span style="color: #007700">&lt;link</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;style.css&quot;</span> <span style="color: #0000CC">rel=</span><span style="background-color: #fff0f0">&quot;stylesheet&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;/head&gt;</span>
 
-<span style="color: #007700">&lt;body&gt;</span>
-    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;navigation&quot;</span><span style="color: #007700">&gt;</span>
-        <span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-list&quot;</span><span style="color: #007700">&gt;</span>
-            <span style="color: #007700">&lt;li</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-item&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;#home&quot;</span><span style="color: #007700">&gt;</span>Home<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-            <span style="color: #007700">&lt;li</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-item&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;#gettingstarted&quot;</span><span style="color: #007700">&gt;</span>Getting Started<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
-        <span style="color: #007700">&lt;/ul&gt;</span>
-    <span style="color: #007700">&lt;/div&gt;</span>
+    <span style="color: #007700">&lt;body&gt;</span>
+        <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;navigation&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;img</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;logo&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;img/logo.png&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #007700">&lt;ul</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-list&quot;</span><span style="color: #007700">&gt;</span>
+                <span style="color: #007700">&lt;li</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-item&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;#home&quot;</span><span style="color: #007700">&gt;</span>Home<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #007700">&lt;li</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-item&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;#gettingstarted&quot;</span><span style="color: #007700">&gt;</span>Getting Started<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+                <span style="color: #007700">&lt;li</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;nav-item&quot;</span><span style="color: #007700">&gt;&lt;a</span> <span style="color: #0000CC">href=</span><span style="background-color: #fff0f0">&quot;#changelog&quot;</span><span style="color: #007700">&gt;</span>Change Log<span style="color: #007700">&lt;/a&gt;&lt;/li&gt;</span>
+            <span style="color: #007700">&lt;/ul&gt;</span>
+        <span style="color: #007700">&lt;/div&gt;</span>
 
-    <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;container&quot;</span> <span style="color: #0000CC">highway-view</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
+        <span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;container&quot;</span> <span style="color: #0000CC">highway-view</span><span style="color: #007700">&gt;&lt;/div&gt;</span>
 
-    <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;../src/highway.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
-    <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;index.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
-<span style="color: #007700">&lt;/body&gt;</span>
+        <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/html&quot;</span> <span style="color: #0000CC">id=</span><span style="background-color: #fff0f0">&quot;changelog&quot;</span><span style="color: #007700">&gt;</span>
+            <span style="color: #333333">&lt;</span>h2<span style="color: #333333">&gt;</span>Change Log<span style="color: #333333">&lt;</span><span>/h2&gt;</span>
 
-<span style="color: #007700">&lt;/html&gt;</span>
-</pre></div>
+            <span style="color: #333333">&lt;</span>h3<span style="color: #333333">&gt;</span>V0.<span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">10</span>th December <span style="color: #0000DD; font-weight: bold">2015</span><span style="color: #333333">&lt;</span><span>/h3&gt;</span>
+            <span style="color: #333333">&lt;</span>ul<span style="color: #333333">&gt;</span>
+                <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;</span>Adding ability to load from script tag rather than HTML file<span style="color: #333333">&lt;</span><span>/li&gt;</span>
+                <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;</span>Adding bower repository<span style="color: #333333">&lt;</span><span>/li&gt;</span>
+                <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;</span>Adding change log<span style="color: #333333">&lt;</span><span>/li&gt;</span>
+                <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;</span>Updating documentation<span style="color: #333333">&lt;</span><span>/li&gt;</span>
+            <span style="color: #333333">&lt;</span><span>/ul&gt;</span>
+
+            <span style="color: #333333">&lt;</span>h3<span style="color: #333333">&gt;</span>V0.<span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">6</span>th December <span style="color: #0000DD; font-weight: bold">2015</span><span style="color: #333333">&lt;</span><span>/h3&gt;</span>
+            <span style="color: #333333">&lt;</span>ul<span style="color: #333333">&gt;</span>
+                <span style="color: #333333">&lt;</span>li<span style="color: #333333">&gt;</span>Initial Release <span style="color: #333333">-</span> All basic functionality.<span style="color: #333333">&lt;</span><span>/li&gt;</span>
+            <span style="color: #333333">&lt;</span><span>/ul&gt;</span>
+        <span style="color: #007700">&lt;/script&gt;</span>
+
+        <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;js/highway.min.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+        <span style="color: #007700">&lt;script </span><span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">&quot;text/javascript&quot;</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;index.js&quot;</span><span style="color: #007700">&gt;&lt;/script&gt;</span>
+    <span style="color: #007700">&lt;/body&gt;</span>
+
+    <span style="color: #007700">&lt;/html&gt;</span>
+    </pre></div>
+
+
 
 <h4>Step Two</h4>
 
-<p>Create any HTML files required for each of your pages. Create a javascript file to set up the routes.</p>
+<p>Create any HTML files required for each of your pages or add a script tage to your page that contains the html. The script tag should have the type 'text/html' and an id which you state as the template in the routes config.</p>
+<p>Create a javascript file to set up the routes.</p>
 
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">(<span style="color: #008800; font-weight: bold">function</span>() {
 
@@ -55,11 +80,15 @@
         }, {
             state<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;gettingstarted&#39;</span>,
             template<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;pages/gettingstarted/gettingstarted.html&#39;</span>
+        }, {
+            state<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;changelog&#39;</span>,
+            template<span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;#changelog&#39;</span>
         }],
         <span style="color: #008800; font-weight: bold">default</span><span style="color: #333333">:</span> <span style="background-color: #fff0f0">&#39;home&#39;</span>
     });
 })();
 </pre></div>
+
 
 <p>Use <b>highway.configureRoutes</b> to set up the routes. It should receive an object with a routes property which will be an array of route objects, and a property called default which will define the state to go to when one was not specified.<br/><br/>
 A <b>route</b> object must have a <b>state</b> property. This is a string that is essentially the name of the page. This will be displayed in the url.<br/><br/>

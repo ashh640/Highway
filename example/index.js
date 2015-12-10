@@ -19,6 +19,9 @@
         }, {
             state: 'gettingstarted',
             template: 'pages/gettingstarted/gettingstarted.html'
+        }, {
+            state: 'changelog',
+            template: '#changelog'
         }],
         default: 'home'
     });

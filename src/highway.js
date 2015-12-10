@@ -30,6 +30,7 @@
     this.templateCache = null;
     this.baseUrl = null;
     this.states = null;
+    this.inlineTemplates = null;
 
     //find the container element to render to
     function highwayjs() {
@@ -38,6 +39,9 @@
 
         // var containers = document.getElementsByTagName('highway-view');
         var containers = document.querySelectorAll('[highway-view]');
+
+        //load all inline templates
+        self.loadInlineTemplates();
 
         if(!containers || containers.length === 0) {
             //we should have a container and we dont... inform the user
@@ -65,6 +69,37 @@
 
         //ensure we watch url for changes
         window.addEventListener("hashchange", onUrlChange);
+    }
+
+    highwayjs.prototype.loadInlineTemplates = function() {
+        //initialise storage
+        self.inlineTemplates = [];
+
+        var inlineTemplates = document.getElementsByTagName('script');
+
+        //find all scripts with type 'text/html'
+        for(var i = 0; i < inlineTemplates.length; i++) {
+            var script = inlineTemplates[i];
+
+            //get script type
+            var id = script.getAttribute('id');
+            var type = script.getAttribute('type');
+
+            //we have no id or type then ignore
+            if(!id || !type) continue;
+
+            //check if script is html type
+            if(type.toLowerCase() === 'text/html') {
+                //get contents of script tag and store
+                var template = script.innerHTML;
+
+                //store template
+                self.inlineTemplates.push({
+                    id: id,
+                    template: template
+                });
+            }
+        }
     }
 
     highwayjs.prototype.navigateToUrl = function (event) {
@@ -318,6 +353,23 @@
 
     //ajax loader for loading templates
     highwayjs.prototype.loadTemplate = function(url, callback) {
+
+        //if url starts with a hash then load from inline template
+        if(url.indexOf('#') === 0) {
+
+            var targetId = url.substr(1);
+
+            //iterate all inline templates and find the one we are looking for
+            for(var i = 0; i < self.inlineTemplates.length; i++) {
+                var template = self.inlineTemplates[i];
+
+                if(template.id === targetId) {
+                    callback(template.template);
+                    return;
+                }
+            }
+            throw 'HighwayJS - Could not find template "' + url + '"';
+        }
 
         //create request
         var xhttp = new XMLHttpRequest();
