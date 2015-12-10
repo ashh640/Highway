@@ -31,12 +31,30 @@ Create a basic html page and load the highway.js script. You should also have a 
         <ul class="nav-list">
             <li class="nav-item"><a href="#home">Home</a></li>
             <li class="nav-item"><a href="#gettingstarted">Getting Started</a></li>
+            <li class="nav-item"><a href="#changelog">Change Log</a></li>
         </ul>
     </div>
 
     <div class="container" highway-view></div>
 
-    <script type="text/javascript" src="../src/highway.js"></script>
+    <script type="text/html" id="changelog">
+        <h2>Change Log</h2>
+
+        <h3>V0.2 - 10th December 2015</h3>
+        <ul>
+            <li>Adding ability to load from script tag rather than HTML file</li>
+            <li>Adding bower repository</li>
+            <li>Adding change log</li>
+            <li>Updating documentation</li>
+        </ul>
+
+        <h3>V0.1 - 6th December 2015</h3>
+        <ul>
+            <li>Initial Release - All basic functionality.</li>
+        </ul>
+    </script>
+
+    <script type="text/javascript" src="js/highway.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
 </body>
 
@@ -45,7 +63,9 @@ Create a basic html page and load the highway.js script. You should also have a 
 
 #### Step Two
 
-Create any HTML files required for each of your pages. Create a javascript file to set up the routes.
+Create any HTML files required for each of your pages or add a script tage to your page that contains the html. The script tag should have the type 'text/html' and an id which you state as the template in the routes config.
+
+Create a javascript file to set up the routes.
 
 ```javascript
 (function() {
@@ -69,6 +89,9 @@ Create any HTML files required for each of your pages. Create a javascript file 
         }, {
             state: 'gettingstarted',
             template: 'pages/gettingstarted/gettingstarted.html'
+        }, {
+            state: 'changelog',
+            template: '#changelog'
         }],
         default: 'home'
     });
